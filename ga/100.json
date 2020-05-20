@@ -1,0 +1,639 @@
+{
+  "representations": [
+    {
+      "mos": 1.0672, 
+      "bitrate": 117, 
+      "id": "0"
+    }, 
+    {
+      "mos": 1.43, 
+      "bitrate": 238, 
+      "id": "1"
+    }, 
+    {
+      "mos": 2.6878, 
+      "bitrate": 487, 
+      "id": "2"
+    }, 
+    {
+      "mos": 4.1773, 
+      "bitrate": 977, 
+      "id": "3"
+    }, 
+    {
+      "mos": 4.8103, 
+      "bitrate": 1955, 
+      "id": "4"
+    }, 
+    {
+      "mos": 4.9589, 
+      "bitrate": 3901, 
+      "id": "5"
+    }
+  ], 
+  "nprb": 25, 
+  "seed": 1587130127, 
+  "capacity": 24496, 
+  "users": [
+    {
+      "cqi": 1, 
+      "prb_throughput": 104.0, 
+      "id": "0", 
+      "max_throughput": 2600
+    }, 
+    {
+      "cqi": 7, 
+      "prb_throughput": 396.48, 
+      "id": "1", 
+      "max_throughput": 9912
+    }, 
+    {
+      "cqi": 0, 
+      "prb_throughput": 0, 
+      "id": "2", 
+      "max_throughput": 0
+    }, 
+    {
+      "cqi": 8, 
+      "prb_throughput": 457.92, 
+      "id": "3", 
+      "max_throughput": 11448
+    }, 
+    {
+      "cqi": 4, 
+      "prb_throughput": 229.44, 
+      "id": "4", 
+      "max_throughput": 5736
+    }, 
+    {
+      "cqi": 13, 
+      "prb_throughput": 855.36, 
+      "id": "5", 
+      "max_throughput": 21384
+    }, 
+    {
+      "cqi": 0, 
+      "prb_throughput": 0, 
+      "id": "6", 
+      "max_throughput": 0
+    }, 
+    {
+      "cqi": 3, 
+      "prb_throughput": 175.68, 
+      "id": "7", 
+      "max_throughput": 4392
+    }, 
+    {
+      "cqi": 14, 
+      "prb_throughput": 979.84, 
+      "id": "8", 
+      "max_throughput": 24496
+    }, 
+    {
+      "cqi": 7, 
+      "prb_throughput": 396.48, 
+      "id": "9", 
+      "max_throughput": 9912
+    }, 
+    {
+      "cqi": 3, 
+      "prb_throughput": 175.68, 
+      "id": "10", 
+      "max_throughput": 4392
+    }, 
+    {
+      "cqi": 5, 
+      "prb_throughput": 309.44, 
+      "id": "11", 
+      "max_throughput": 7736
+    }, 
+    {
+      "cqi": 0, 
+      "prb_throughput": 0, 
+      "id": "12", 
+      "max_throughput": 0
+    }, 
+    {
+      "cqi": 5, 
+      "prb_throughput": 309.44, 
+      "id": "13", 
+      "max_throughput": 7736
+    }, 
+    {
+      "cqi": 2, 
+      "prb_throughput": 139.84, 
+      "id": "14", 
+      "max_throughput": 3496
+    }, 
+    {
+      "cqi": 8, 
+      "prb_throughput": 457.92, 
+      "id": "15", 
+      "max_throughput": 11448
+    }, 
+    {
+      "cqi": 9, 
+      "prb_throughput": 541.44, 
+      "id": "16", 
+      "max_throughput": 13536
+    }, 
+    {
+      "cqi": 14, 
+      "prb_throughput": 979.84, 
+      "id": "17", 
+      "max_throughput": 24496
+    }, 
+    {
+      "cqi": 6, 
+      "prb_throughput": 319.68, 
+      "id": "18", 
+      "max_throughput": 7992
+    }, 
+    {
+      "cqi": 3, 
+      "prb_throughput": 175.68, 
+      "id": "19", 
+      "max_throughput": 4392
+    }, 
+    {
+      "cqi": 11, 
+      "prb_throughput": 610.56, 
+      "id": "20", 
+      "max_throughput": 15264
+    }, 
+    {
+      "cqi": 0, 
+      "prb_throughput": 0, 
+      "id": "21", 
+      "max_throughput": 0
+    }, 
+    {
+      "cqi": 9, 
+      "prb_throughput": 541.44, 
+      "id": "22", 
+      "max_throughput": 13536
+    }, 
+    {
+      "cqi": 9, 
+      "prb_throughput": 541.44, 
+      "id": "23", 
+      "max_throughput": 13536
+    }, 
+    {
+      "cqi": 7, 
+      "prb_throughput": 396.48, 
+      "id": "24", 
+      "max_throughput": 9912
+    }, 
+    {
+      "cqi": 0, 
+      "prb_throughput": 0, 
+      "id": "25", 
+      "max_throughput": 0
+    }, 
+    {
+      "cqi": 3, 
+      "prb_throughput": 175.68, 
+      "id": "26", 
+      "max_throughput": 4392
+    }, 
+    {
+      "cqi": 12, 
+      "prb_throughput": 824.64, 
+      "id": "27", 
+      "max_throughput": 20616
+    }, 
+    {
+      "cqi": 9, 
+      "prb_throughput": 541.44, 
+      "id": "28", 
+      "max_throughput": 13536
+    }, 
+    {
+      "cqi": 4, 
+      "prb_throughput": 229.44, 
+      "id": "29", 
+      "max_throughput": 5736
+    }, 
+    {
+      "cqi": 12, 
+      "prb_throughput": 824.64, 
+      "id": "30", 
+      "max_throughput": 20616
+    }, 
+    {
+      "cqi": 2, 
+      "prb_throughput": 139.84, 
+      "id": "31", 
+      "max_throughput": 3496
+    }, 
+    {
+      "cqi": 9, 
+      "prb_throughput": 541.44, 
+      "id": "32", 
+      "max_throughput": 13536
+    }, 
+    {
+      "cqi": 14, 
+      "prb_throughput": 979.84, 
+      "id": "33", 
+      "max_throughput": 24496
+    }, 
+    {
+      "cqi": 5, 
+      "prb_throughput": 309.44, 
+      "id": "34", 
+      "max_throughput": 7736
+    }, 
+    {
+      "cqi": 0, 
+      "prb_throughput": 0, 
+      "id": "35", 
+      "max_throughput": 0
+    }, 
+    {
+      "cqi": 0, 
+      "prb_throughput": 0, 
+      "id": "36", 
+      "max_throughput": 0
+    }, 
+    {
+      "cqi": 10, 
+      "prb_throughput": 564.48, 
+      "id": "37", 
+      "max_throughput": 14112
+    }, 
+    {
+      "cqi": 4, 
+      "prb_throughput": 229.44, 
+      "id": "38", 
+      "max_throughput": 5736
+    }, 
+    {
+      "cqi": 1, 
+      "prb_throughput": 104.0, 
+      "id": "39", 
+      "max_throughput": 2600
+    }, 
+    {
+      "cqi": 11, 
+      "prb_throughput": 610.56, 
+      "id": "40", 
+      "max_throughput": 15264
+    }, 
+    {
+      "cqi": 9, 
+      "prb_throughput": 541.44, 
+      "id": "41", 
+      "max_throughput": 13536
+    }, 
+    {
+      "cqi": 5, 
+      "prb_throughput": 309.44, 
+      "id": "42", 
+      "max_throughput": 7736
+    }, 
+    {
+      "cqi": 10, 
+      "prb_throughput": 564.48, 
+      "id": "43", 
+      "max_throughput": 14112
+    }, 
+    {
+      "cqi": 1, 
+      "prb_throughput": 104.0, 
+      "id": "44", 
+      "max_throughput": 2600
+    }, 
+    {
+      "cqi": 2, 
+      "prb_throughput": 139.84, 
+      "id": "45", 
+      "max_throughput": 3496
+    }, 
+    {
+      "cqi": 0, 
+      "prb_throughput": 0, 
+      "id": "46", 
+      "max_throughput": 0
+    }, 
+    {
+      "cqi": 5, 
+      "prb_throughput": 309.44, 
+      "id": "47", 
+      "max_throughput": 7736
+    }, 
+    {
+      "cqi": 4, 
+      "prb_throughput": 229.44, 
+      "id": "48", 
+      "max_throughput": 5736
+    }, 
+    {
+      "cqi": 4, 
+      "prb_throughput": 229.44, 
+      "id": "49", 
+      "max_throughput": 5736
+    }, 
+    {
+      "cqi": 14, 
+      "prb_throughput": 979.84, 
+      "id": "50", 
+      "max_throughput": 24496
+    }, 
+    {
+      "cqi": 8, 
+      "prb_throughput": 457.92, 
+      "id": "51", 
+      "max_throughput": 11448
+    }, 
+    {
+      "cqi": 10, 
+      "prb_throughput": 564.48, 
+      "id": "52", 
+      "max_throughput": 14112
+    }, 
+    {
+      "cqi": 0, 
+      "prb_throughput": 0, 
+      "id": "53", 
+      "max_throughput": 0
+    }, 
+    {
+      "cqi": 2, 
+      "prb_throughput": 139.84, 
+      "id": "54", 
+      "max_throughput": 3496
+    }, 
+    {
+      "cqi": 13, 
+      "prb_throughput": 855.36, 
+      "id": "55", 
+      "max_throughput": 21384
+    }, 
+    {
+      "cqi": 6, 
+      "prb_throughput": 319.68, 
+      "id": "56", 
+      "max_throughput": 7992
+    }, 
+    {
+      "cqi": 11, 
+      "prb_throughput": 610.56, 
+      "id": "57", 
+      "max_throughput": 15264
+    }, 
+    {
+      "cqi": 0, 
+      "prb_throughput": 0, 
+      "id": "58", 
+      "max_throughput": 0
+    }, 
+    {
+      "cqi": 11, 
+      "prb_throughput": 610.56, 
+      "id": "59", 
+      "max_throughput": 15264
+    }, 
+    {
+      "cqi": 12, 
+      "prb_throughput": 824.64, 
+      "id": "60", 
+      "max_throughput": 20616
+    }, 
+    {
+      "cqi": 14, 
+      "prb_throughput": 979.84, 
+      "id": "61", 
+      "max_throughput": 24496
+    }, 
+    {
+      "cqi": 4, 
+      "prb_throughput": 229.44, 
+      "id": "62", 
+      "max_throughput": 5736
+    }, 
+    {
+      "cqi": 3, 
+      "prb_throughput": 175.68, 
+      "id": "63", 
+      "max_throughput": 4392
+    }, 
+    {
+      "cqi": 1, 
+      "prb_throughput": 104.0, 
+      "id": "64", 
+      "max_throughput": 2600
+    }, 
+    {
+      "cqi": 1, 
+      "prb_throughput": 104.0, 
+      "id": "65", 
+      "max_throughput": 2600
+    }, 
+    {
+      "cqi": 9, 
+      "prb_throughput": 541.44, 
+      "id": "66", 
+      "max_throughput": 13536
+    }, 
+    {
+      "cqi": 12, 
+      "prb_throughput": 824.64, 
+      "id": "67", 
+      "max_throughput": 20616
+    }, 
+    {
+      "cqi": 9, 
+      "prb_throughput": 541.44, 
+      "id": "68", 
+      "max_throughput": 13536
+    }, 
+    {
+      "cqi": 4, 
+      "prb_throughput": 229.44, 
+      "id": "69", 
+      "max_throughput": 5736
+    }, 
+    {
+      "cqi": 7, 
+      "prb_throughput": 396.48, 
+      "id": "70", 
+      "max_throughput": 9912
+    }, 
+    {
+      "cqi": 2, 
+      "prb_throughput": 139.84, 
+      "id": "71", 
+      "max_throughput": 3496
+    }, 
+    {
+      "cqi": 13, 
+      "prb_throughput": 855.36, 
+      "id": "72", 
+      "max_throughput": 21384
+    }, 
+    {
+      "cqi": 11, 
+      "prb_throughput": 610.56, 
+      "id": "73", 
+      "max_throughput": 15264
+    }, 
+    {
+      "cqi": 11, 
+      "prb_throughput": 610.56, 
+      "id": "74", 
+      "max_throughput": 15264
+    }, 
+    {
+      "cqi": 12, 
+      "prb_throughput": 824.64, 
+      "id": "75", 
+      "max_throughput": 20616
+    }, 
+    {
+      "cqi": 11, 
+      "prb_throughput": 610.56, 
+      "id": "76", 
+      "max_throughput": 15264
+    }, 
+    {
+      "cqi": 10, 
+      "prb_throughput": 564.48, 
+      "id": "77", 
+      "max_throughput": 14112
+    }, 
+    {
+      "cqi": 6, 
+      "prb_throughput": 319.68, 
+      "id": "78", 
+      "max_throughput": 7992
+    }, 
+    {
+      "cqi": 2, 
+      "prb_throughput": 139.84, 
+      "id": "79", 
+      "max_throughput": 3496
+    }, 
+    {
+      "cqi": 9, 
+      "prb_throughput": 541.44, 
+      "id": "80", 
+      "max_throughput": 13536
+    }, 
+    {
+      "cqi": 3, 
+      "prb_throughput": 175.68, 
+      "id": "81", 
+      "max_throughput": 4392
+    }, 
+    {
+      "cqi": 13, 
+      "prb_throughput": 855.36, 
+      "id": "82", 
+      "max_throughput": 21384
+    }, 
+    {
+      "cqi": 3, 
+      "prb_throughput": 175.68, 
+      "id": "83", 
+      "max_throughput": 4392
+    }, 
+    {
+      "cqi": 6, 
+      "prb_throughput": 319.68, 
+      "id": "84", 
+      "max_throughput": 7992
+    }, 
+    {
+      "cqi": 4, 
+      "prb_throughput": 229.44, 
+      "id": "85", 
+      "max_throughput": 5736
+    }, 
+    {
+      "cqi": 12, 
+      "prb_throughput": 824.64, 
+      "id": "86", 
+      "max_throughput": 20616
+    }, 
+    {
+      "cqi": 2, 
+      "prb_throughput": 139.84, 
+      "id": "87", 
+      "max_throughput": 3496
+    }, 
+    {
+      "cqi": 6, 
+      "prb_throughput": 319.68, 
+      "id": "88", 
+      "max_throughput": 7992
+    }, 
+    {
+      "cqi": 3, 
+      "prb_throughput": 175.68, 
+      "id": "89", 
+      "max_throughput": 4392
+    }, 
+    {
+      "cqi": 8, 
+      "prb_throughput": 457.92, 
+      "id": "90", 
+      "max_throughput": 11448
+    }, 
+    {
+      "cqi": 2, 
+      "prb_throughput": 139.84, 
+      "id": "91", 
+      "max_throughput": 3496
+    }, 
+    {
+      "cqi": 2, 
+      "prb_throughput": 139.84, 
+      "id": "92", 
+      "max_throughput": 3496
+    }, 
+    {
+      "cqi": 0, 
+      "prb_throughput": 0, 
+      "id": "93", 
+      "max_throughput": 0
+    }, 
+    {
+      "cqi": 10, 
+      "prb_throughput": 564.48, 
+      "id": "94", 
+      "max_throughput": 14112
+    }, 
+    {
+      "cqi": 6, 
+      "prb_throughput": 319.68, 
+      "id": "95", 
+      "max_throughput": 7992
+    }, 
+    {
+      "cqi": 1, 
+      "prb_throughput": 104.0, 
+      "id": "96", 
+      "max_throughput": 2600
+    }, 
+    {
+      "cqi": 8, 
+      "prb_throughput": 457.92, 
+      "id": "97", 
+      "max_throughput": 11448
+    }, 
+    {
+      "cqi": 13, 
+      "prb_throughput": 855.36, 
+      "id": "98", 
+      "max_throughput": 21384
+    }, 
+    {
+      "cqi": 14, 
+      "prb_throughput": 979.84, 
+      "id": "99", 
+      "max_throughput": 24496
+    }
+  ]
+}
