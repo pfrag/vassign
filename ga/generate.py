@@ -30,6 +30,7 @@ import json
 import getopt
 import sys
 import random
+from datetime import datetime
 
 # defaults
 NPRB_DEFAULT = 25
@@ -127,6 +128,10 @@ tbs_index_to_tbs_100 = [
 b = [117, 238, 487, 977, 1955, 3901] # scaled down for the DP algorithm to run faster.
 mos = [1.0672, 1.43, 2.6878, 4.1773, 4.8103, 4.9589]
 
+# Uncomment to allow only the better quality representations to be used
+# b = [487, 977, 1955, 3901] 
+# mos = [2.6878, 4.1773, 4.8103, 4.9589]
+
 def generate_scenario(nprb, nusers, seed = None, outpath = None, randomize_video = False, allow_disconnected_ues = False, rate_unit_bps = False):
   """Generates a scenario.
 
@@ -146,10 +151,10 @@ def generate_scenario(nprb, nusers, seed = None, outpath = None, randomize_video
   if randomize_video:
     b = []
     mos = []
-    nrep = 10
+    nrep = 6
     # create random video representation characteristics
     for i in range(nrep):
-      b.append(random.randint(0, 100))
+      b.append(random.randint(100, 5000))
       mos.append(random.uniform(1, 5))
 
   # Network downlink capacity (max achievable throughput for perfect channel conditions) 
@@ -163,7 +168,7 @@ def generate_scenario(nprb, nusers, seed = None, outpath = None, randomize_video
 
   # seed PRNG
   if not seed:
-    seed = int(time.time())
+    seed = int(datetime.now().timestamp()*1000)
   random.seed(seed)
 
   representations = []

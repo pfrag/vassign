@@ -59,23 +59,33 @@ def exp_compare_algorithms(randomize = False):
   confidence = 0.95
 
   R = itertools.chain(range(10, 100, 10), range(100, 2000, 100), range(2000, 5001, 1000))
-  #R = range(10,11,10)
-  for nusers in R:
-    # generate ga configuration object
-    settings = {
-      "crossover_rate": 0.5,
-      "mutation_rate": 0.0,
-      "solution_pool_size": 40,
-      "generations": 30,
-      "convergence_check": True,
-      "delta": 0.01,
-      "stop_after": 15,
-      "scenario_file": "in",
-      "solution_file": "./solution.json",
-      "generations_file": "./generations.dat",
-      "loglevel": "NONE",
-    }
 
+  # generate ga configuration object
+  settings = {
+    "crossover_rate": 0.5,
+    "mutation_rate": 0.0,
+    "solution_pool_size": 40,
+    "generations": 30,
+    "convergence_check": True,
+    "delta": 0.01,
+    "stop_after": 15,
+    "scenario_file": "in",
+    "solution_file": "./solution.json",
+    "generations_file": "./generations.dat",
+    "loglevel": "NONE",
+  }
+
+  print("# Number of iterations: ", iterations)
+  print("# Crossover rate: ", settings["crossover_rate"])
+  print("# Mutation rate: ", settings["mutation_rate"])
+  print("# Solution pool size: ", settings["solution_pool_size"])
+  print("# Generations: ", settings["generations"])
+  print("# Convergence check: ", settings["convergence_check"])
+  print("# Delta: ", settings["delta"])
+  print("# Stop after: ", settings["stop_after"])
+  print("###########################################")
+
+  for nusers in R:
     # The results of all executions are held here, 1 element per iteration
     results = []
 
@@ -256,10 +266,10 @@ def exp_multithread(randomize = False):
   """Test CPLEX execution time vs. the number of threads/cores
   """
 
-  iterations = 50
+  iterations = 100
   confidence = 0.95
 
-  R = itertools.chain(range(10, 100, 10), range(100, 2000, 100), range(2000, 10001, 1000))
+  R = itertools.chain(range(10, 100, 10), range(100, 2000, 100), range(2000, 10001, 1000), range(15000, 20001, 5000))
   #R = itertools.chain(range(1000, 20001, 1000))
   for nusers in R:
     results = []
@@ -287,5 +297,5 @@ def exp_multithread(randomize = False):
     print() 
 
 exp_compare_algorithms(False)
-#exp_multithread()
+#exp_multithread(True)
 

@@ -64,13 +64,6 @@ def _copy_users(users):
 
 class chromosome(object):
   def __init__(self, genes, fitness = 0.0):
-    """
-    if genes:
-      self.genes = []
-      for i in range(len(genes)):
-        self.genes.append(gene(genes[i].uid, genes[i].rid, genes[i].bitrate, genes[i].mos, genes[i].max_throughput))
-    self.fitness = fitness
-    """
     self.genes = genes
     self.fitness = fitness
 
@@ -198,14 +191,14 @@ class GA(object):
     """
     retval = 0
     for g in solution.genes:
-      if g.mos is not none:
+      if g.mos:
         retval += g.mos
     return retval
 
   def get_used_capacity(self, s):
     """Get the used capacity in terms of prbs
     """
-    used_capacity = 0
+    used_capacity = 0.0
     for g in s.genes:
       if g.bitrate:
         used_capacity += g.bitrate/g.prb_throughput
@@ -215,7 +208,7 @@ class GA(object):
     """Chech whether the capacity constraint of a solution is respected (i.e., the number of needed prbs are less than the maximum available).
     """
     if self.get_used_capacity(solution) > self.scenario["nprb"]:
-        return False
+      return False
     return True
  
   def init_solution_pool(self):
@@ -287,7 +280,7 @@ class GA(object):
     
     Generate S feasible assignments as follows:
     - First create a number of solutions where all users take the same representation
-    - Do a number of crossover and mutation operations to create the rest of the solution pool
+    - Do a number of crossover operations to create the rest of the solution pool
     """
     self.solution_pool = []
     solutions_to_generate = self.solution_pool_size
@@ -315,7 +308,7 @@ class GA(object):
         else:
           solution.genes[uindex].rid = None
           solution.genes[uindex].bitrate = 0
-          solution.genes[uindex].mos = 0
+          solution.genes[uindex].mos = 0.0
           solution.genes[uindex].prb_throughput = 0
           solution.genes[uindex].max_throughput = 0
       self.solution_pool.append(solution)
@@ -389,8 +382,7 @@ class GA(object):
     - Select two random chromosomes (solutions) from the pool
     - Draw a random split point
     - Create two new chromosomes joining one part from the one and one from the other parent
-    - Return the one with the better quality or None if none is ok with the
-    network capacity constraint
+    - Return up to two chromosomes (depending on whether they're ok with the capacity constraint)
     """
 
     offsprings = []
@@ -410,7 +402,7 @@ class GA(object):
     used_capacity2 = 0
     fitness2 = 0
     ok2 = False 
- 
+
     # check capacity constraints and calculate fitness in one pass
     for i in range(0, len(offspring1.genes)):
       if offspring1.genes[i].rid and offspring1.genes[i].prb_throughput > 0:
@@ -456,30 +448,24 @@ class GA(object):
         if not admissible_reps:
           continue
 
-        # loop until we find a feasible *different* representation
-        #while True and len(admissible_reps) > 0:
+        # Find a feasible *different* representation
         # pick a random representation from the ones admissible by the user   
+        # TODO: looks ugly, refactor 
         r = randint(0, len(admissible_reps))
         # assumption/hack: the "virtual" representation #len corresponds to no video
         if r == len(admissible_reps):
           if u.rid is None:
-            # this means that the user is already without video, so keep loopin
-            #continue
             pass
           else:
             # otherwise, remove the assigned representation (aka switch user video off)
             s.fitness -= u.mos # update fitness value in place, to save time
             u.rid = None
             u.bitrate = None
-            u.mos = None
-            #break
+            u.mos = 0.0
         else:
           # drew an existing representation. if it's different than the one the user already has, 
           # assign it. Otherwise, keep loopin.
           if u.rid is not None and u.rid == admissible_reps[r]["id"]:
-            # we drew the same rid. keep loopin
-            #del(admissible_reps[r])
-            #continue
             pass
           else:
             # Done with this guy. Move to next chromosome/solution
@@ -495,20 +481,21 @@ class GA(object):
             u.bitrate = admissible_reps[r]["bitrate"]
             u.mos = admissible_reps[r]["mos"]
             s.fitness += u.mos
+
             if not self.check_capacity_constraint(s):
               # undo if the mutant is not a feasible solution
               if old_rid == -1:
                 s.fitness -= u.mos
                 u.rid = None
                 u.bitrate = None
-                u.mos = None
+                u.mos = 0.0
               else:
                 s.fitness = s.fitness - u.mos + old_m
                 u.rid = old_rid
                 u.bitrate = old_b
                 u.mos = old_m
-            #break
-       
+        s.fitness = self.fitness(s)
+
   def generation(self):
     """A GA generation to produce a new solution pool.
     
@@ -531,6 +518,12 @@ class GA(object):
 
     # mutation
     self.mutation()
+        
+    # select top-S chromosomes according to their fitness value 
+    # and create new solution pool
+    #for s in self.solution_pool:
+      ## update fitness values of all candidate solutions
+      #s["fitness"] = self.fitness(s)
     
     # keep the top-S solutions
     self.solution_pool = sorted(self.solution_pool, key=attrgetter('fitness'), reverse = True)[0:self.solution_pool_size]
