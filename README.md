@@ -1,5 +1,8 @@
 # vassign
-RAN-aware video quality selection algorithms
+RAN-aware video quality selection algorithms. More details on our model and algorithms can be found in this article:
+
+>Francesco Giannone, Pantelis A. Frangoudis, Adlen Ksentini, and Luca Valcarenghi, "Orchestrating heterogeneous MEC-based applications for connected vehicles," Computer Networks, vol. 180, 2020, 107402.
+http://www.sciencedirect.com/science/article/pii/S1389128620301997
 
 # Requirements
 - Python 3: You can create a virtual environment and install the dependencies in requirements.txt.
